@@ -1,4 +1,4 @@
-title:            CodeInventory
+title:            floodtwo
 description:      "Nerd's feeder!"
 logo:             logo.png
 disqus_shortname: codeinventorycom
@@ -11,16 +11,16 @@ url:        	 http://www.codeinventory.com
 
 # Owner/author information
 owner:
-  name:           Amey Jadiye
+  name:           floodtwo
   avatar:         ameyjadiye.jpg
   email:          ameyjadiye@gmail.com
   # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
   description:    Programming is 1% knowledge, 2% ability and 97% getting the ability to work with the knowledge :)
   # Social networking links used in footer. Update and remove as you like.
-  twitter:        ameyjadiye
-  facebook:       ameyjadiye
-  github:         ameyjadiye    
-  instagram:      ameyjadiye
+  twitter:        floodtwo
+  facebook:       floodtwo
+  github:         floodtwo    
+  instagram:      floodtwo
   # For Google Authorship https://plus.google.com/authorship
   google_plus:    https://plus.google.com/u/0/+AmeyJadiye
 
