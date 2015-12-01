@@ -4,9 +4,9 @@ layout: post
 title:  "Spring multiFileUpload/ Download"
 date:   2015-11-27 21:05
 comments: true
-category: spring
+category: Spring
 tags: 
-- spring
+- Spring
 ---
 
 # 멀티 업로드 
