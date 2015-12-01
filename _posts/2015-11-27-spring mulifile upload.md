@@ -33,28 +33,19 @@ upfile 이라는 이름으로 동시에 3개를 업로드 할수 있는 multifil
 	public Map fileupload(HttpServletRequest request, HttpServletResponse response)  {
 		Map returnMap = new HashMap();
 		try {
-			//다중파일 업로드
-			MultipartHttpServletRequest multipartRequest =  (MultipartHttpServletRequest)request;  
-			
-			// upfile 이라는 이름으로 파일을 수신
-			List<MultipartFile> files = multipartRequest.getFiles("upFile"); 
-			
+			MultipartHttpServletRequest multipartRequest =  (MultipartHttpServletRequest)request;  //다중파일 업로드
+			List<MultipartFile> files = multipartRequest.getFiles("upFile"); // upfile 이라는 이름으로 파일을 수신
 			for(int i = 0 ; i < files.size(); i++){
 				MultipartFile mf = (MultipartFile) files.get(i);
-				
-				// 파일 암호화및 중복 처리 대응 
-				String u = UUID.randomUUID().toString().replaceAll("-", "");  
+				String u = UUID.randomUUID().toString().replaceAll("-", "");  // 파일 암호화및 중복 처리 대응 
 				File ff = new File("c:\\"+ u );
-				// 파일을 서버로 복사 
-				mf.transferTo(ff);                                          
+				mf.transferTo(ff);                                          // 파일을 서버로 복사 
 			}
 		} catch (Exception e) {
 			returnMap.put("msg", "err");
 		}
 		return returnMap;
-	}		
-	
-	
+	}
 
 끝 업로드는 별고 아니였음 ...
 
@@ -144,4 +135,10 @@ upfile 이라는 이름으로 동시에 3개를 업로드 할수 있는 multifil
     }
     
 bean 설정때문에 고생했지만은 T^T 다운로드 잘된다 +_+ 후후훗 ㅋㅋ
-	
+
+
+
+
+
+
+
