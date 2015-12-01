@@ -1,9 +1,12 @@
 ---
+author: floodtwo
 layout: post
-title:  Spring multiFileUpload/ Download
-date:   2015-11-27 21:00
-categories: Spring
-tags: spring egov
+title:  "Spring multiFileUpload/ Download"
+date:   2015-11-27 21:05
+comments: true
+category: spring
+tags: 
+- spring
 ---
 
 # 멀티 업로드 
