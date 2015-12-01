@@ -1,9 +1,12 @@
 ---
+author: floodtwo
 layout: post
-title:  javascript (Radian / degress)  각도 및 거리 
+title:  "javascript (Radian / degress)  각도 및 거리"
 date:   2015-11-07 13:02
-categories: javascript
-tags: javascript
+comments: true
+category: javascript
+tags: 
+- javascript
 ---
 # JAVASCRIPT 각도 관련 자료
  
