@@ -1,0 +1,795 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js – The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		
+		<style type="text/css">
+		
+			/* 기본 CSS */
+		
+			.div2 {
+				position: absolute;
+				opacity: 0;
+				width: 250px;
+			}
+			
+			.div2 small{
+				font-size: 30px;
+			}
+
+			#div2_socar{
+				 width:300px;
+				 hegiht:300px;
+			}
+			
+			.div2_after{
+				position: absolute;
+				top:-1000px;
+				width:400px;
+				hegiht:300px;
+			}
+			
+			.div4{
+				position: absolute;
+				left : 300px;
+				width: 380px;
+			}
+			
+			.div4_socar{
+				position: absolute;
+				left : 0px;
+				top:  60px;
+				width: 50px;
+				hegiht: 50px;
+			}
+			
+			.div4_after{
+				position: absolute;
+				top:-1000px;
+				width:400px;
+				hegiht:300px;
+			}
+			
+			.div6{
+				position: absolute;
+				top:-1000px;
+				width:800px;
+				hegiht:300px;
+			}
+			
+			
+			/* CSS Animation 동작및 타임 지정 */
+			/** 2페이지  **/
+			.div2_1{
+				-webkit-animation: div2_1 ease-in-out 10s  alternate;
+				-webkit-animation-delay: 1s;
+			}
+			
+			.div2_2{
+				-webkit-animation: div2_2 ease-in-out 10s  alternate;
+				-webkit-animation-delay: 1s;
+			}
+			
+			.div2_3{
+				-webkit-animation: div2_3 ease-in-out 10s  alternate;
+				-webkit-animation-delay: 1s;
+			}
+			
+			.div2_4{
+				-webkit-animation: div2_4 ease-in-out 10s  alternate;
+				-webkit-animation-delay: 1s;
+			}
+			
+			.div2_5{
+				-webkit-animation: div2_5  ease-in-out 10s    ;
+				-webkit-animation-fill-mode: forwards;
+				-webkit-animation-delay: 8.8s;
+				
+			}
+			
+			.div2_6{
+				-webkit-animation: div2_6  ease-in-out 3s    ;
+				-webkit-animation-fill-mode: forwards;
+				-webkit-animation-delay: 16s;
+
+			}
+			
+			.div2_7{
+				-webkit-animation: div2_7  ease-in-out 3s    ;
+				-webkit-animation-fill-mode: forwards;
+				-webkit-animation-delay: 17.5s;
+			}
+			
+			.div2_8{
+				-webkit-animation: div2_8  ease-in-out 3s    ;
+				-webkit-animation-fill-mode: forwards;
+				-webkit-animation-delay: 20s;
+			}
+			
+			/** 2페이지  **/
+			
+			
+			/* CSS Animation*/
+			@-webkit-keyframes div2_1
+			{
+			   from {left: 0px;                 }
+			   0%  {opacity: 0; top: 50px;   left: 0px;  }
+			   20%  {opacity: 1; top: 100px; left: 0px;   }
+			   80%  {opacity: 1; top: 100px; left: 0px;  -webkit-transform:  rotate(0deg);  }
+			   to   {opacity: 0; top: 100px; left: 2000px;  -webkit-transform:  rotate(3600deg);  }
+			}
+			
+			@-webkit-keyframes div2_2
+			{
+			   from {left: 0px;                 }
+			   20%  {opacity: 0; top: 300px; left: 0px;   }
+			   40%  {opacity: 1; top: 400px; left: 0px;   }
+			   80%  {opacity: 1; top: 400px; left: 0px;  -webkit-transform:  rotate(0deg);  }
+			   to   {opacity: 0; top: 400px; left: 2000px; -webkit-transform:  rotate(3600deg); }
+			}
+			
+			@-webkit-keyframes div2_3
+			{
+			   from {left: 0px;                 }
+			   40%  {opacity: 0; top: 50px;  left: 650px;   }
+			   60%  {opacity: 1; top: 100px; left: 650px;   }
+			   80%  {opacity: 1; top: 100px; left: 650px;  -webkit-transform:  rotate(0deg);  }
+			   to   {opacity: 0; top: 100px; left: 2650px; -webkit-transform: rotate(3600deg);}
+			}
+			
+			
+			@-webkit-keyframes div2_4
+			{
+			   from {left: 0px;                 }
+			   60%  {opacity: 0; top: 300px; left: 650px;   }
+			   80%  {opacity: 1; top: 400px; left: 650px;  -webkit-transform:  rotate(0deg);  }
+			   to   {opacity: 0; top: 400px; left: 2650px; -webkit-transform:  rotate(3600deg);}
+			}
+			
+			@-webkit-keyframes div2_5
+			{
+			   from {left: -2100px;  top:100px;      }
+			   
+			   5% {  top: 80px; 	left: 350px; -webkit-transform:   scaleX(1.0) }
+			   7% {  top: 80px; 	left: 500px; -webkit-transform:   scaleX(2.0) }
+			   13% {  top: 80px; 	left: 275px; -webkit-transform:   scaleX(0.5) }
+			   18% {  top: 80px; 	left: 440px; -webkit-transform:   scaleX(1.6) }
+			   23% {  top: 80px; 	left: 320px; -webkit-transform:   scaleX(0.8) }
+			   28%  { top: 80px; 	left: 350px; -webkit-transform:   scaleX(1.0) }		
+			   40%  { top: 80px; 	left: 350px; -webkit-transform:   scaleX(1.0) }		
+			   60%  { top: -50px; 	left: 0px;  -webkit-transform:  scale(0.3) }		
+			   to   { top: -50px; 	left: 0px;  -webkit-transform:  scale(0.3)}
+			}
+			
+			@-webkit-keyframes div2_6{
+				from {opacity: 0; left: 290px;  top:90px;      }
+				to  {opacity: 1;  left: 290px;  top:90px; }
+			}
+			
+			@-webkit-keyframes div2_7{
+				from {opacity: 0; left: 290px;  top:160px;      }
+				to  {opacity: 1;  left: 290px;  top:160px; }
+			}
+			
+				
+			@-webkit-keyframes div2_8{
+				from {opacity: 0; left: 200px;  top:380px;      }
+				to  {opacity: 1;  left: 200px;  top:380px; }
+			}
+			
+			
+			
+
+			/** 4페이지  **/
+			
+			.div4_2{
+				-webkit-animation: div4_2 ease-in-out 1.2s  alternate;
+				-webkit-animation-fill-mode: forwards;
+				-webkit-animation-delay: 5.1s;				
+			}
+			
+			.div4_3{
+				-webkit-animation: div4_3 ease-in-out 5s  alternate;
+				-webkit-animation-fill-mode: forwards;
+				-webkit-animation-delay: 4s;
+			}
+			
+			.div4_4{
+				-webkit-animation: div4_4 ease-in-out 1.2s  alternate;
+				-webkit-animation-fill-mode: forwards;
+				-webkit-animation-delay: 5.3s;
+			}
+			
+			.div4_5{
+				-webkit-animation: div4_5 ease-in-out 1.2s  alternate;
+				-webkit-animation-fill-mode: forwards;
+				-webkit-animation-delay: 8.1s;				
+			}
+			
+			.div4_6{
+				-webkit-animation: div4_6 ease-in-out 5s  alternate;
+				-webkit-animation-fill-mode: forwards;
+				-webkit-animation-delay: 7s;
+			}
+			
+			.div4_7{
+				-webkit-animation: div4_7 ease-in-out 1.2s  alternate;
+				-webkit-animation-fill-mode: forwards;
+				-webkit-animation-delay: 8.3s;
+			}
+			
+			.div4_8{
+				-webkit-animation: div4_8 ease-in-out 1.2s  alternate;
+				-webkit-animation-fill-mode: forwards;
+				-webkit-animation-delay: 11.1s;				
+			}
+			
+			.div4_9{
+				-webkit-animation: div4_9 ease-in-out 5s  alternate;
+				-webkit-animation-fill-mode: forwards;
+				-webkit-animation-delay: 10s;
+			}
+			
+			.div4_10{
+				-webkit-animation: div4_10 ease-in-out 1.2s  alternate;
+				-webkit-animation-fill-mode: forwards;
+				-webkit-animation-delay: 11.3s;
+			}
+			
+			.div4_11{
+				-webkit-animation: div4_11 ease-in-out 1.2s  alternate;
+				-webkit-animation-fill-mode: forwards;
+				-webkit-animation-delay: 14s;
+			}
+			
+						
+			@-webkit-keyframes div4_2
+			{
+			   from { top: 70px; left: 300px;   -webkit-transform:  skewX(0);  }
+			   20% { top:  70px; left: 300px;   -webkit-transform:  skewX(-30deg);  }
+			   to   { top: 70px; left: 1500px;  }
+			}			
+			
+						
+			@-webkit-keyframes div4_3
+			{
+			   from { top: 60px; left: 0px;   }
+			   10% { top: 60px; left: 50px;  -webkit-transform:  skewX(-30deg); }
+			   50%  { -webkit-transform:  skewX(-20deg); }
+			   60%  { top: 60px; left: 900px;  -webkit-transform:  skewX(25deg); }
+			   70%  { top: 60px; left: 890px;  -webkit-transform:  skewX(0deg); }
+			   to   { top: 60px; left: 890px;  -webkit-transform:    }
+			}
+			
+			
+			@-webkit-keyframes div4_4
+			{
+			   from { top: 70px; left: -1500px;   -webkit-transform:  skewX(0);  }
+			   80%  { -webkit-transform:  skewX(-30deg); }
+			   to   { top: 70px; left: 300px;  -webkit-transform:  skewX(0); }
+			}	
+			
+			@-webkit-keyframes div4_5
+			{
+			   from { top: 120px; left: 300px;   -webkit-transform:  skewX(0);  }
+			   20% {  top: 120px; left: 300px;   -webkit-transform:  skewX(-30deg);  }
+			   to   { top: 120px; left: 1500px;  }
+			}			
+			
+						
+			@-webkit-keyframes div4_6
+			{
+			   from { top: 120px; left: 0px;   }
+			   10% {  top: 120px; left: 50px;  -webkit-transform:  skewX(-30deg); }
+			   50%  { -webkit-transform:  skewX(-20deg); }
+			   60%  { top: 120px; left: 900px;  -webkit-transform:  skewX(25deg); }
+			   70%  { top: 120px; left: 890px;  -webkit-transform:  skewX(0deg); }
+			   to   { top: 120px; left: 890px;  -webkit-transform:    }
+			}
+			
+			
+			@-webkit-keyframes div4_7
+			{
+			   from { top: 120px; left: -1500px;   -webkit-transform:  skewX(0);  }
+			   80%  { -webkit-transform:  skewX(-30deg); }
+			   to   { top: 120px; left: 300px;  -webkit-transform:  skewX(0); }
+			}	
+			
+			
+			@-webkit-keyframes div4_8
+			{
+			   from { top: 180px; left: 300px;   -webkit-transform:  skewX(0);  }
+			   20% {  top: 180px; left: 300px;   -webkit-transform:  skewX(-30deg);  }
+			   to   { top: 180px; left: 1500px;  }
+			}			
+			
+						
+			@-webkit-keyframes div4_9
+			{
+			   from { top: 180px; left: 0px;   }
+			   10% {  top: 180px; left: 50px;  -webkit-transform:  skewX(-30deg); }
+			   50%  { -webkit-transform:  skewX(-20deg); }
+			   60%  { top: 180px; left: 900px;  -webkit-transform:  skewX(25deg); }
+			   70%  { top: 180px; left: 890px;  -webkit-transform:  skewX(0deg); }
+			   to   { top: 180px; left: 890px;  -webkit-transform:    }
+			}
+			
+			@-webkit-keyframes div4_10
+			{
+			   from { top: 180px; left: -1500px;   -webkit-transform:  skewX(0);  }
+			   80%  { -webkit-transform:  skewX(-30deg); }
+			   to   { top: 180px; left: 300px;  -webkit-transform:  skewX(0); }
+			}	
+			
+			@-webkit-keyframes div4_11
+			{
+			   from { opacity : 0; top: 300px; left: 300px;  }
+			   to   { opacity : 1; top: 300px; left: 300px;  }
+			}
+			
+			/** 6페이지  **/
+			
+			.div6_1{
+				-webkit-animation: div6_1 ease-in-out 1s  alternate;
+				-webkit-animation-fill-mode: forwards;
+				-webkit-animation-delay: 1s;	
+			}
+			
+			.div6_2{
+				-webkit-animation: div6_2 ease-in-out 1.2s  alternate;
+				-webkit-animation-fill-mode: forwards;
+				-webkit-animation-delay: 3s;				
+			}
+			
+			.div6_3{
+				-webkit-animation: div6_3 ease-in-out 1.2s  alternate;
+				-webkit-animation-fill-mode: forwards;
+				-webkit-animation-delay: 5s;				
+			}
+			
+			.div6_4{
+				-webkit-animation: div6_4 ease-in-out 1.2s  alternate;
+				-webkit-animation-fill-mode: forwards;
+				-webkit-animation-delay: 7s;				
+			}
+			
+			@-webkit-keyframes div6_1
+			{
+			   from { opacity : 0; top: 0px;   }
+			   to   { opacity : 1; top: 0px;   }
+			}
+			
+			@-webkit-keyframes div6_2
+			{
+			   from { opacity : 0; top: 50px; left:0px;  }
+			   to   { opacity : 1; top: 50px; left:0px;   }
+			}
+			
+			
+			@-webkit-keyframes div6_3
+			{
+			   from { opacity : 0; top: 280px;   }
+			   to   { opacity : 1; top: 280px;   }
+			}
+			
+			@-webkit-keyframes div6_4
+			{
+			   from { opacity : 0; top: 330px;   }
+			   to   { opacity : 1; top: 330px;   }
+			}
+			
+			
+			
+			
+			
+			
+		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					
+					<h3>입사지원자 - 이홍수 </h3>
+					<p>
+						<small>쏘카 공통질문 답변 자료  </small>
+					</p>
+				</section>
+
+				<section>
+					<h3>1. 왜 많은 회사중 쏘카를 선택하셨는지?</h3>
+				</section>
+				
+				<section id="section2">
+				
+				
+					<h4 id ="div2_title" >제가 찾고 있는 회사는 ?</h4>
+					
+					<div id ="div2_1" class='div2' >
+						<small>재미있는 개발이  <br>가능한 회사</small>
+					</div>
+					
+					<div id ="div2_2" class='div2'>
+						<small>속도감있는 회사 </small>
+					</div>
+					
+					<div id ="div2_3" class='div2' >
+						<small>메인 사업에 참여 <br>
+						가능한 회사 </small>
+					</div>
+					
+					<div id ="div2_4" class='div2' >
+						<small> First Mover  </small>
+					</div>
+					
+					<div id ="div2_5" class='div2_after'>
+						<img src ="socar.png" id="div2_socar" >
+					</div>
+
+					<div id ="div2_6" class="div2_after" >
+						제가 생각하는 쏘카는!
+					</div>
+
+					
+					<div id ="div2_7" class="div2_after" >
+						<small> 빠른 성장의 기업 </small> <br>
+						
+						<small> 메인 사업에 집중하는 스타트업  </small> <br>						 
+						
+						<small> B2C의 RealTime 사업 </small>	<br>						 					 
+						
+						<small> 개발자의 성장도 생각하는 기업  </small><br>						 						
+						
+					</div>
+					
+						<div id ="div2_8" class="div2_after" style="width:600px; font-weight:bold" >
+							<small>즉 , 개발자가 재미있게 개발 할 수 있는 기업<br>
+									이라고 생각해서 지원하게 되었습니다. 
+							</small>
+						</div>
+					
+					<div>
+						<br> <br> <br> <br>
+						<br> <br> <br> <br>
+					</div>
+				</section>
+				
+				<section>
+					<h3>2. 쏘카에서 어떤걸 기대하시는지?  <br>(개인의성장) </h3>
+				</section>
+					
+				<section>
+					<div id ="div4_1" class="" >
+						쏘카에서 저는 이런것을 기대 합니다. 
+					</div>
+					
+					<div id ="div4_2" class='div4' >
+						<small> <br>남의일 (SI/SM 사업) 하는 개발자  </small> 
+					</div>
+
+					<div id ="div4_3" class='div4_socar'>
+						<SPAN><img src ="socar.png" id="div2_socar" ></SPAN>
+					</div>
+					
+					<div id ="div4_4" class='div4_after' >
+						<small> <br> 성취감이 있는 나의 일을 하는 개발 </small> 
+					</div>
+					
+					
+					<div id ="div4_5" class='div4' style="top:120px;" >
+						<small> <br> 팀의 키맨  </small> 
+					</div>
+
+					<div id ="div4_6" class='div4_socar' style="top:120px;" >
+						<SPAN><img src ="socar.png" id="div2_socar" ></SPAN>
+					</div>
+					
+					<div id ="div4_7" class='div4_after'  >
+						<small> <br> 실력좋은 멋진 팀원과의 만남 </small> 
+					</div>
+					
+					
+					<div id ="div4_8" class='div4' style="top:180px;" >
+						<small> <br> 기술의 발전이 없는 프로젝트  </small> 
+					</div>
+
+					<div id ="div4_9" class='div4_socar' style="top:180px;" >
+						<SPAN><img src ="socar.png" id="div2_socar" ></SPAN>
+					</div>
+					
+					<div id ="div4_10" class='div4_after'  >
+						<small> <br> dynamic한 살아있는 개발 프로젝트 </small> 
+					</div>
+					
+					<div id ="div4_10" class='div4_after'  >
+						<small> <br> dynamic한 살아있는 개발 프로젝트 </small> 
+					</div>
+					
+					<div id ="div4_11" class="div4_after" >
+						<small>회사에서 최고의 복지는 좋은 동료와 <br>
+							    재미있는 일이라고 생각하고 <br>
+								그것을 쏘카에서 기대 합니다. 
+						</small> 
+					</div>
+					
+					
+					<div>
+						<br> <br> <br> <br>
+						<br> <br> <br> <br>
+					</div>
+				</section>
+				
+				<section>
+					<h3>3. 쏘카에 어떠한것을 <br> 기여를 하실수 있으신지?  <br>(조직의성장) </h3>
+				</section>
+				
+				<section>
+						
+						<div id ="div6_1" class="div6" >
+							 1. 좋은 변화를 만들어 보겠습니다. 
+						</div>
+						
+						<div id ="div6_2" style="text-align:left; padding-left: 220px;"  class="div6" >
+							<small> 기존 프로젝트에서도 팀의 문제를 찾아서<br>
+							<span style="padding-left: 40px;"> ● CI 툴 도입           : Nexus, Hudson  <br></span>
+							<span style="padding-left: 40px;"> ● BTS 도입             : Mantis   <br> </span>
+							<span style="padding-left: 40px;"> ● 테스트 프로세스 수립 : 개발자 상호 테스트  <br> </span>
+							<span style="padding-left: 40px;"> ● Deploy 프로세스 수립 : 1주일 주기 small Release <br> </span>
+							<span style="padding-left: 40px;"> ● 산출물 체계 재구축   : SDLC에 맞는 체계로 재작성 <br> </span>
+								   등을 스스로 제안을 해서 프로젝트에 반영했습니다. 
+							</small>
+						</div>
+						<br>
+						
+						<div id ="div6_3"  class="div6" >
+							 2. 다양한 상상력을 기여 하겠습니다.
+						</div>
+						
+						<div id ="div6_4" style="text-align:left; padding-left: 220px;"   class="div6">
+							<small> 혹시나 이런건 어떨까요 ?<br>
+							<span style="padding-left: 40px;">    ● 자율 주행 자동차 + Socar를 이용한 융합사업의 준비  <br></span>
+							<span style="padding-left: 40px;">    ● Socar지정 주차장을 통한 관광 코스 수립  <br></span>
+							<span style="padding-left: 40px;">   ● ISO26262 인증을 통한 안정성 확보       <br></span>
+							<span style="padding-left: 40px;">  ● FIDO를 이용한 보안강화 및 편의성 증대 <br></span>
+							등 이런 저런 생각들을 쏘카와 이야기 해보고 싶습니다.</small><br></span>
+						</div>
+						
+<div>
+						<br> <br> <br> <br>
+						<br> <br> <br> <br>
+					</div>
+				</section>
+				
+				<section>
+					<h3> 마지막으로 <br>쏘카가 바라는 개발자는  어떤 사람인가요? </h3>
+				
+				</section>
+				
+				
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+		
+			var divArray = [];
+			
+			function init(){
+				initDivId("div2_1");
+				initDivId("div2_2");
+				initDivId("div2_3");
+				initDivId("div2_4");
+				initDivId("div2_5");
+				initDivId("div2_6");
+				initDivId("div2_7");
+				initDivId("div2_8");
+				initDivId("div4_2");
+				initDivId("div4_3");
+				initDivId("div4_4");
+				initDivId("div4_5");
+				initDivId("div4_6");
+				initDivId("div4_7");
+				initDivId("div4_8");
+				initDivId("div4_9");
+				initDivId("div4_10");
+				initDivId("div4_11");
+				
+				initDivId("div6_1");
+				initDivId("div6_2");
+				initDivId("div6_3");
+				initDivId("div6_4");
+				
+				
+			}
+			
+			function initDivId (name){
+				divArray[name]	= document.getElementById(name);
+			}
+			
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+			
+			
+			Reveal.addEventListener( 'slidechanged', function( event ) {
+				
+				if(event.indexh == 1){
+					init2();
+				}
+				
+				// 2번째 페이지 대응 
+				if(event.indexh == 2){
+					action2();
+				}
+				if(event.indexh == 3){
+					init2();
+					init4();
+				}
+				
+				if(event.indexh == 4){
+					action4();
+				}
+				
+				if(event.indexh == 5){
+					init4();
+					init6();
+				}
+
+				if(event.indexh == 6){
+					action6();
+				}
+				
+				if(event.indexh == 7){
+					init6();
+				}
+				
+				
+				
+				
+			} );
+			
+			
+			
+			function action2(){
+				divArray.div2_1.className = "div2 div2_1";
+				divArray.div2_2.className = "div2 div2_2";
+				divArray.div2_3.className = "div2 div2_3";
+				divArray.div2_4.className = "div2 div2_4";
+				divArray.div2_5.className = "div2_after div2_5" ;						
+				divArray.div2_6.className = "div2_after div2_6" ;	
+				divArray.div2_7.className = "div2_after div2_7" ;	
+				divArray.div2_8.className = "div2_after div2_8" ;	
+			}
+			
+			function init2(){
+				divArray.div2_1.className = "div2";
+				divArray.div2_2.className = "div2";
+				divArray.div2_3.className = "div2";
+				divArray.div2_4.className = "div2";
+				divArray.div2_5.className = "div2_after";
+				divArray.div2_6.className = "div2_after";
+				divArray.div2_7.className = "div2_after";
+				divArray.div2_8.className = "div2_after";
+			}
+			
+			function action4(){
+			
+				divArray.div4_2.className = "div4 div4_2";
+				divArray.div4_3.className = "div4_socar div4_3";
+				divArray.div4_4.className = "div4_after div4_4";
+				
+				divArray.div4_5.className = "div4 div4_5";
+				divArray.div4_6.className = "div4_socar div4_6";
+				divArray.div4_7.className = "div4_after div4_7";
+				
+				divArray.div4_8.className = "div4 div4_8";
+				divArray.div4_9.className = "div4_socar div4_9";
+				divArray.div4_10.className = "div4_after div4_10";
+				divArray.div4_11.className = "div4_after div4_11";
+				
+			}
+			
+			
+			function init4(){
+				divArray.div4_2.className = "div4";
+				divArray.div4_3.className = "div4_socar ";
+				divArray.div4_4.className = "div4_after";
+				
+				divArray.div4_5.className = "div4";
+				divArray.div4_6.className = "div4_socar ";
+				divArray.div4_7.className = "div4_after";
+				
+				divArray.div4_8.className = "div4";
+				divArray.div4_9.className = "div4_socar ";
+				divArray.div4_10.className = "div4_after";
+				divArray.div4_11.className = "div4_after";
+			}
+			
+			function action6(){
+				divArray.div6_1.className = "div6 div6_1";
+				divArray.div6_2.className = "div6 div6_2";
+				divArray.div6_3.className = "div6 div6_3";
+				divArray.div6_4.className = "div6 div6_4";
+			}
+			
+			function init6(){
+				divArray.div6_1.className = "div6";
+				divArray.div6_2.className = "div6";
+				divArray.div6_3.className = "div6";
+				divArray.div6_4.className = "div6";
+			}
+			
+			
+			function objToString(obj) {
+				var str = '';
+				for (var p in obj) {
+					if (obj.hasOwnProperty(p)) {
+						str += p + '::' + obj[p] + '\n';
+					}
+				}
+				return str;
+			}
+			
+			// 초기화 함수 
+			init();
+			
+			
+		</script>
+
+	</body>
+</html>
